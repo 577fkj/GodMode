@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="10dp">
+	
+	<tiiehenry.android.view.loadingview.LoadingView
+		android:id="@id/mddialogs_loading_view"
+		android:layout_width="70dp"
+		android:layout_height="70dp"
+		android:layout_margin="10dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp"
+		app:lvAlternatingRotation="true"
+		app:lvCount="2"
+		app:lvColor="?attr/colorPrimary" />
+	
+	<TextView
+		android:id="@id/mddialogs_loading_text_tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:textSize="15sp"
+		android:layout_gravity="center_horizontal"
+		tools:text="loading" />
+</LinearLayout>

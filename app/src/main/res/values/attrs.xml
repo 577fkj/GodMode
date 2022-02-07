@@ -1,0 +1,15 @@
+<resources>
+    <declare-styleable name="LoadingView">
+        <attr name="lvCount" format="integer"/>
+        <attr name="lvStartAngle" format="integer"/>
+        <attr name="lvSweepAngle" format="integer"/>
+        <attr name="lvStrokeWidth" format="dimension"/>
+        <attr name="lvMaxSpeed" format="integer"/>
+        <attr name="lvMinSpeed" format="integer"/>
+        <attr name="lvCirclePadding" format="dimension"/>
+        <attr name="lvRefreshInterval" format="integer"/>
+        <attr name="lvColor" format="color"/>
+        <attr name="lvCounterclockwise" format="boolean"/>
+        <attr name="lvAlternatingRotation" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="progress_colors">
+        <item>@android:color/black</item>
+        <item>@android:color/black</item>
+        <item>@android:color/black</item>
+    </integer-array>
+
+    <string-array name="visible_entries">
+        <item>@string/rule_details_visible</item>
+        <item>@string/rule_details_invisible</item>
+        <item>@string/rule_details_gone</item>
+    </string-array>
+
+    <string-array name="target_wh_type_entries">
+        <item>@string/rule_details_wh_type_no</item>
+        <item>@string/rule_details_wh_type_w</item>
+        <item>@string/rule_details_wh_type_h</item>
+        <item>@string/rule_details_wh_type_wh</item>
+    </string-array>
+
+    <string-array name="visible_values">
+        <item>0</item>
+        <item>4</item>
+        <item>8</item>
+    </string-array>
+    
+    <string-array name="target_wh_type_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="xposed_scope">
+        <item>android</item>
+    </string-array>
+
+</resources>

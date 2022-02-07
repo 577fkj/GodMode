@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<SwitchPreference
+		android:icon="@mipmap/ic_god"
+		android:key="@string/pref_key_detail_rule_enable"
+		android:title="@string/rule_details_rule_enable" />
+	<EditTextPreference
+		android:dialogTitle="@string/rule_details_set_alias"
+		android:key="@string/pref_key_detail_rule_alias"
+		android:persistent="false"
+		android:summary="@string/rule_details_set_alias"
+		android:title="@string/rule_details_field_alias" />
+	<PreferenceCategory android:title="@string/pref_detail_header_view_control">
+		
+		<SwitchPreference
+			android:key="@string/pref_key_detail_rule_auto_click"
+			android:title="@string/rule_details_rule_auto_click" />
+		
+		<EditTextPreference
+			android:dialogTitle="@string/rule_details_set_alpha"
+			android:inputType="number"
+			android:key="@string/pref_key_detail_rule_alpha"
+			android:persistent="false"
+			android:summary="@string/rule_details_set_alpha"
+			android:title="@string/rule_details_field_alpha" />
+		
+		<DropDownPreference
+			android:entries="@array/visible_entries"
+			android:entryValues="@array/visible_values"
+			android:key="@string/pref_key_detail_view_visible"
+			android:persistent="false"
+			android:title="@string/rule_details_field_visible" />
+		
+		<DropDownPreference
+			android:entries="@array/target_wh_type_entries"
+			android:entryValues="@array/target_wh_type_values"
+			android:key="@string/pref_key_detail_view_target_wh_type"
+			android:persistent="false"
+			android:title="@string/rule_details_field_target_wh" />
+		
+		<EditTextPreference
+			android:dialogTitle="@string/rule_details_set_target_width"
+			android:key="@string/pref_key_detail_rule_target_width"
+			android:persistent="false"
+			android:summary="@string/rule_details_set_target_width"
+			android:title="@string/rule_details_field_target_width" />
+		
+		<EditTextPreference
+			android:dialogTitle="@string/rule_details_set_target_height"
+			android:key="@string/pref_key_detail_rule_target_height"
+			android:persistent="false"
+			android:summary="@string/rule_details_set_target_height"
+			android:title="@string/rule_details_field_target_height" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/pref_detail_header_view_info">
+		
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_bounds"
+			android:title="@string/rule_details_field_view_bounds" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_type"
+			android:title="@string/rule_details_field_view_type" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_depth"
+			android:title="@string/rule_details_field_view_depth" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_res_name"
+			android:title="@string/rule_details_field_res_name" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_text"
+			android:title="@string/rule_details_field_text"
+			app:isPreferenceVisible="false" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_view_description"
+			android:title="@string/rule_details_field_description"
+			app:isPreferenceVisible="false" />
+	
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/pref_detail_header_basic_info">
+		<Preference
+			android:key="@string/pref_key_detail_rule_created_time"
+			android:title="@string/rule_details_field_create_time" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_rule_match_version"
+			android:title="@string/rule_details_field_generate_version" />
+		
+		<Preference
+			android:key="@string/pref_key_detail_rule_applied_activity"
+			android:title="@string/rule_details_field_activity" />
+		
+		<tiiehenry.viewcontroller.widget.preference.ImageViewPreference android:key="preview_image" />
+	</PreferenceCategory>
+
+
+</PreferenceScreen>

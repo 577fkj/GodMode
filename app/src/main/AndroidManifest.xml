@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="tiiehenry.viewcontroller">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission
+		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+		tools:ignore="ScopedStorage" />
+	<uses-permission
+		android:name="android.permission.QUERY_ALL_PACKAGES"
+		tools:ignore="QueryAllPackagesPermission" />
+	
+	<uses-permission-sdk-23 android:name="android.permission.FOREGROUND_SERVICE" />
+	
+	<application
+		android:name=".GodModeApplication"
+		android:allowBackup="false"
+		android:icon="@mipmap/ic_god"
+		android:label="@string/app_name"
+		android:requestLegacyExternalStorage="true"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".SettingsActivity"
+			android:exported="true"
+			android:launchMode="singleTask"
+			android:screenOrientation="unspecified">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+			</intent-filter>
+		</activity>
+		
+		<activity-alias
+			android:name="SettingsAliasActivity"
+			android:exported="true"
+			android:targetActivity=".SettingsActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity-alias>
+		
+		<service
+			android:name=".QuickSettingsService"
+			android:exported="false"
+			android:icon="@drawable/ic_angel_normal"
+			android:label="@string/app_name"
+			android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		
+		<service
+			android:name=".NotificationService"
+			android:exported="false"
+			android:icon="@drawable/ic_angel_normal"
+			android:label="@string/app_name" />
+		
+		<provider
+			android:name="androidx.core.content.FileProvider"
+			android:authorities="tiiehenry.viewcontroller.fileProvider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_paths" />
+		</provider>
+		
+		<meta-data
+			android:name="xposedmodule"
+			android:value="true" />
+		<meta-data
+			android:name="xposedscope"
+			android:resource="@array/xposed_scope" />
+		<meta-data
+			android:name="xposeddescription"
+			android:value="@string/xposed_description" />
+		<meta-data
+			android:name="xposedminversion"
+			android:value="53" />
+		<meta-data
+			android:name="xposed_init"
+			android:value="tiiehenry.viewcontroller.injection.GodModeInjector" />
+	</application>
+
+</manifest>

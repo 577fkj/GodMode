@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item name="mddialogs_loading_view" type="id" />
+	<item name="mddialogs_loading_text_tv" type="id" />
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_stop_and_run_app"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_media_next"
+        android:title="@string/menu_title_stop_and_run_app" />
+    <item
+        android:id="@+id/menu_run_app"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/menu_title_run_app" />
+    <item
+        android:id="@+id/menu_revoke_rules"
+        android:title="@string/menu_title_purge_all_rules" />
+
+    <item
+        android:id="@+id/menu_export_rules"
+        android:title="@string/menu_export_all_rules" />
+
+</menu>
